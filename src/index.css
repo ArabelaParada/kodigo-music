@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f507;
+}
+
+nav {
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.226);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: rgb(54, 2, 2);
+  text-decoration: none;
+}
+
+.contact-container {
+  width: 100%;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #070606;
+  border-radius: 12px;
+  background: rgba(248, 248, 248, 0.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  
+}
