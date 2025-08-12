@@ -1,15 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    navigate("/login");
+  };
+
   return (
-    <nav style={{ padding: "1rem", background: "#f0f0f0" }}>
-      <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
-      <Link to="/contacto">Contacto</Link>
-      <Link to="/musica">Música</Link>
+    <nav>
+      {/* tus enlaces */}
+      <button onClick={() => navigate("/login")}>Iniciar sesión</button>
     </nav>
   );
-}
+};
 
 export default Navbar;
 

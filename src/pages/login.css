@@ -1,0 +1,84 @@
+/* Hacemos que la pantalla ocupe todo el alto y centramos con flexbox */
+.login-wrapper {
+  height: 100vh; /* 100% del alto de la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a6c77, #d7c3eb);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Estilo del formulario */
+.login-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  width: 350px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #a2a3a7;
+  outline: none;
+}
+
+/* Botón */
+.login-container button {
+  margin-top: 20px;
+  width: 100%;
+  background: #bec6eb;
+  border: none;
+  padding: 14px;
+  color: white;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background: #b4b6c5;
+}
+/* Mensaje de error */
+.error-message {
+  background-color: #ffe0e0;
+  color: #c00;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.link-to-register {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.link-to-register a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+.link-to-register a:hover {
+  text-decoration: underline;
+}

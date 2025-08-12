@@ -41,17 +41,19 @@ function Music() {
     }
   };
 
-  const eliminarDePlaylist = (titulo) => {
-    setPlaylist(playlist.filter((item) => item.titulo !== titulo));
-  };
+const eliminarDePlaylist = (titulo) => {
+  const cancionEliminada = playlist.find((item) => item.titulo === titulo);
 
-  const calificarFavorito = (titulo, estrellas) => {
-    setPlaylist(
-      playlist.map((item) =>
-        item.titulo === titulo ? { ...item, favorito: estrellas } : item
-      )
-    );
-  };
+  // Si la canción eliminada es la que está sonando, detenla
+  if (audio && cancionEliminada && audio.src === cancionEliminada.url) {
+    audio.pause();
+    setAudio(null); // limpiar referencia
+  }
+
+  // Eliminarla de la lista
+  setPlaylist(playlist.filter((item) => item.titulo !== titulo));
+};
+
 
   return (
     <div className="music-container">
